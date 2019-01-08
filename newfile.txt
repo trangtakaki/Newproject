@@ -1,2 +1,6 @@
-commit lan 1
-commit lan 2
+SELECT ketqua.MAHV, DIEM, KQUA, XEPLOAI
+FROM ketqua
+INNER JOIN bienlai ON ketqua.MAKH= bienlai.MAKH
+INNER JOIN lophoc ON bienlai.MALOP = lophoc.MALOP
+INNER JOIN giaovien ON lophoc.MAGV = giaovien.MAGV
+WHERE giaovien.MAGV=1 and ketqua.MAKH=1
